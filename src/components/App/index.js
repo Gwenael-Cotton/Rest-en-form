@@ -36,7 +36,6 @@ const App = ({
   isLogged, role, appInit, isNewUser,
 }) => {
   useEffect(appInit, []);
-  // useEffect(onClickLogout, []);
 
   return (
     <div className="app">
