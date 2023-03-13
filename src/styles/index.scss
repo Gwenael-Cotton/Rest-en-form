@@ -1,0 +1,13 @@
+@use 'reset';
+@use 'vars' as v;
+
+body {
+  font-family: 'Catamaran', sans-serif;
+  background-color: v.$alt-color;
+}
+
+h1 {
+  color: v.$primary-color;
+  font-size: 1.8em;
+  font-weight: v.$text-bold;
+}

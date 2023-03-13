@@ -1,0 +1,181 @@
+@use '../../styles/vars'as v;
+
+.booking-coaching {
+  padding: v.$gutter * 5 0 0 0;
+  background-color: #eee;
+
+  &__mainContainer {
+    padding: v.$gutter 0;
+    // background-image: url(../../assets/personal_trainer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 30%;
+  }
+
+  &__container {
+    width: 45%;
+    margin: v.$gutter * 2 auto;
+    padding: v.$gutter;
+    background-color: v.$alt-color;
+    border-radius: 10px;
+    box-shadow: 0 0 8px .2px grey;
+    opacity: .9;
+  }
+
+  &__title {
+    margin: 0 auto v.$gutter auto;
+    padding: v.$gutter * 2 0;
+    text-align: center;
+    color: v.$primary-color;
+    font-weight: v.$text-bold;
+    font-size: 1.7em;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__coachContainer {
+    padding: v.$gutter * 2 0 v.$gutter * 2 0;
+  }
+  &__coachs {
+    width: 80%;
+    margin: v.$gutter * 2 auto 0 auto;
+    overflow: auto;
+    max-height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0 0 8px .2px grey;
+    background-color: #eee;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+
+.add-coaching {
+
+  &__form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 v.$gutter 0;
+    
+  }
+
+  &__label-date {
+    display: block;
+    color: black;
+    margin: v.$gutter;
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  &__select {
+    margin: v.$gutter * 4 auto;
+    border: none;
+    border-bottom: 3px solid #ccc;
+    font-size: 1em;
+  }
+
+}
+
+.submitCoaching {
+  margin: v.$gutter;
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    display: block;
+    width: auto;
+    padding: v.$gutter / 1.7 v.$gutter * 1.8;
+    border: 2px solid v.$primary-color;
+    border-radius: 999px;
+    background-image: linear-gradient(to right, transparent 50%, v.$primary-color 50%, v.$secondary-color);
+    background-size: 200%;
+    color: v.$primary-color;
+    font-size: 1.2em;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      color: v.$alt-color;
+      background-position: 100%;
+      border: 2px solid v.$alt-color;
+    }
+  }
+  
+  &:nth-child(4) {
+      margin: 65px 0;
+      justify-content: center;
+  }
+}
+
+.react-datepicker {
+  margin: v.$gutter 0 0 0;
+}
+
+.errorBookingCoaching {
+  margin-top: v.$gutter;
+
+  &__text {
+    font-size: .9em;
+    color: brown;
+  }
+}
+
+.noCoaching {
+  margin: v.$gutter 0 0 0;
+  animation-duration: 650ms;
+  animation-name: noCoaching;
+  
+
+  @keyframes noCoaching {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    40% {
+      transform: translateY(20%);
+    }
+
+    100% {
+      transform: translateY(0%)
+    }
+  }
+
+  &__text {
+
+    font-size: .9em;
+    color: cornflowerblue;
+  }
+}
+
+.successBookingCoaching {
+  margin-top: v.$gutter;
+  animation-duration: 650ms;
+  animation-name: success;
+
+  @keyframes success {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    40% {
+      transform: translateY(20%);
+    }
+
+    100% {
+      transform: translateY(0%)
+    }
+  }
+  
+  &__text {
+    font-size: .9em;
+    color: #f0f;
+  }
+}

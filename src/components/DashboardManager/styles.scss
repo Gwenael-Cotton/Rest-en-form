@@ -1,0 +1,247 @@
+@use '../../styles/vars' as v;
+
+.manager {
+  width: 100%;
+  margin-top: v.$gutter * 4.5;
+  display: flex;
+  justify-content: space-around;
+  background-image: url(../../assets/background-manager.jpg);
+  background-position: 80% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // flex-direction: column;
+
+
+  &-content-left {
+    width: 50%;
+    height: 84vh;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  &-show-members {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: v.$gutter * 6;
+    box-shadow: 5px 5px 20px black;
+    background-color: v.$alt-color;
+    border-radius: 10px;
+    margin-top: v.$gutter;
+    &-box {
+      display: flex;
+      flex-direction: column;
+    }
+    &-link {
+      padding: v.$gutter / 2;
+      width: v.$gutter * 8;
+      text-align: center;
+      border-radius: 30px;
+      // background-image: linear-gradient(to right, transparent 50%, v.$primary-color 50%, v.$secondary-color);
+      // background-size: 200%;
+      font-size: v.$gutter * 1.2;
+      font-weight: 500;
+      color: #fff;
+      background-color: v.$primary-color;
+      border: 2px solid #fff;
+    }
+  }
+
+
+  &-add-user {
+    display: flex;
+    justify-content: space-around;
+    padding: v.$gutter * 2 0;
+    &-title {
+      text-align: center;
+      color: v.$primary-color;
+      font-weight: v.$text-bold;
+      font-size: v.$gutter * 1.7;
+      margin-bottom: v.$gutter * 2;
+    }
+    &-form {
+      width: 500px;
+      box-shadow: 5px 5px 20px black;
+      background-color: v.$alt-color;
+      padding: v.$gutter;
+      border-radius: 10px;
+      &-names {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        // align-items: center;
+        height: v.$gutter * 6;
+        padding: v.$gutter;
+        &-infos {
+          // display: block;
+          // display: flex;
+          color: v.$primary-color;
+          font-weight: v.$text-normal;
+          font-size: v.$gutter * 1.2;
+          margin: v.$gutter;
+        }
+        &-input {
+          width: 100%;
+          border: none;
+          border-bottom: 3px solid #ccc;
+          font-size: v.$gutter;
+          transition: 0.5s;
+          &:focus {
+            padding: v.$gutter;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+    &-checkroles {
+      display: flex;
+      justify-content: space-evenly;
+      margin: v.$gutter * 5;
+      &-title {
+        font-size: v.$gutter * 1.2;
+        font-weight: v.$text-normal;
+        color: v.$primary-color;
+        margin-bottom: v.$gutter;
+      }
+    }
+    &-speciality {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: v.$gutter * 3;
+      padding: v.$gutter * 2;
+      &-title {
+        font-size: v.$gutter * 1.2;
+        font-weight: v.$text-normal;
+        color: v.$primary-color;
+        margin-bottom: v.$gutter;
+      }
+      &-container {
+        width: 300px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      &-item {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    &-submit {
+      padding: v.$gutter / 2;
+      width: v.$gutter * 8;
+      margin-top: v.$gutter;
+      text-align: center;
+      border: 2px solid v.$primary-color;
+      border-radius: 5px;
+      // background-image: linear-gradient(to right, transparent 50%, v.$primary-color 50%, v.$secondary-color);
+      // background-size: 200%;
+      color: v.$primary-color;
+      background-color: v.$alt-color;
+      font-size: v.$gutter * 1.2;
+      font-weight: 500;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+        background-color: v.$primary-color;
+        border: 2px solid #fff;
+      }
+    }
+  }
+
+
+}
+
+ .manager-content-right {
+   display: flex;
+   justify-content: center;
+   width: 50%;
+   background-color: transparent
+ }
+
+.dashboard-select-slot {
+  width: 500px;
+  display: flex;
+  margin-top: v.$gutter;
+  &-form {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: v.$gutter * 3.5;
+    background-color: v.$alt-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  &-title {
+    color: v.$primary-color;
+    font-weight: v.$text-bold;
+    font-size: v.$gutter * 1.7;
+    margin-bottom: v.$gutter * 2;
+  }
+  &-input {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #ccc;
+    font-size: v.$gutter;
+    transition: 0.5s;
+    &:focus {
+      transition: 0.5s;
+    }
+  }
+  &-submit {
+    padding: v.$gutter / 2;
+    width: v.$gutter * 8;
+    margin-top: v.$gutter;
+    text-align: center;
+    border: 2px solid v.$primary-color;
+    border-radius: 5px;
+    // background-image: linear-gradient(to right, transparent 50%, v.$primary-color 50%, v.$secondary-color);
+    // background-size: 200%;
+    color: v.$primary-color;
+    background-color: v.$alt-color;
+    font-size: v.$gutter * 1.2;
+    font-weight: 500;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background-color: v.$primary-color;
+      border: 2px solid #fff;
+    }
+  }
+  &-label {
+    color: v.$primary-color;
+    font-size: 1.2em;
+  }
+  &-select {
+    border: none;
+    border-bottom: 3px solid #ccc;
+    margin-left: v.$gutter;
+    &:focus {
+      
+    }
+  }
+}
+
+.success-adduser {
+  margin-top: v.$gutter;
+  &-text {
+    color: #f0f;
+  }
+}
+.success-addslot {
+  &-text {
+    color: #f0f;
+  }
+}
+
+.error {
+  margin-top: v.$gutter;
+}

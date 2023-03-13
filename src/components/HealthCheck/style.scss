@@ -1,0 +1,82 @@
+@use '../../styles/vars'as v;
+
+.health-check {
+  max-width: 90%;
+  margin: v.$gutter * 2 auto;
+  padding: v.$gutter;
+  box-shadow: 0 0 8px .2px grey;
+  border-radius: v.$element-radius;
+  background-color: v.$alt-color;
+  color: v.$primary-color;
+
+  &__title {
+    margin: v.$gutter * 1.5 0;
+    text-align: center;
+    color: v.$primary-color;
+    font-weight: v.$text-bold;
+    font-size: 1.7em;
+  }
+
+  &__weight {
+    width: 20%;
+    margin: v.$gutter * 2 auto;
+    padding: v.$gutter / 2 v.$gutter / 1.5;
+    border: 1.5px solid v.$primary-color;
+    border-radius: v.$element-radius;
+    background-color: v.$primary-color;
+    color: v.$alt-color;
+    font-weight: v.$text-bold;
+    text-align: center;
+  }
+
+  &__charts {
+    margin: v.$gutter * 2 auto;
+
+    .pie__chart {
+      margin: v.$gutter auto;
+    }
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .water__data {
+      padding: v.$gutter / 1.5 v.$gutter * 2;
+      border-radius: v.$element-radius;
+      box-shadow: 0 0 8px .2px gray;
+    }
+
+    .bodyWater {
+      text-align: center;
+      font-weight: v.$text-bold;
+    }
+  }
+}
+
+.data-text {
+  margin: v.$gutter * 1.2 0;
+  font-size: 1em;
+
+  &--muscleMass {
+    margin-right: v.$gutter / 2;
+    height: 25px;
+    background-color: #cb997e;
+    color: #cb997e;
+  }
+
+  &--fatMass {
+    margin-right: v.$gutter / 2;
+    height: 25px;
+    background-color: #ddbea9;
+    color: #ddbea9;
+  }
+
+  &--boneMass {
+    margin-right: v.$gutter / 2;
+    height: 25px;
+    background-color: #ffe8d6;
+    color: #ffe8d6;
+  }
+}

@@ -1,0 +1,76 @@
+@use '../../styles/vars' as v;
+
+.members-page {
+  margin-top: v.$gutter * 4.5;
+  &-text-content {
+    width: 50%;
+    margin: 0 auto;
+    padding: v.$gutter;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+  }
+  &-title {
+  font-size: v.$gutter * 5;
+  text-align: center;
+  color: v.$primary-color;
+  font-weight: v.$text-bold;
+  }
+  &-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    background-image: url(./members.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-number {
+    font-size: v.$gutter * 2;
+    text-align: center;
+    margin-top: v.$gutter;
+    color: v.$primary-color;
+    font-weight: v.$text-normal;
+  }
+  &-container {
+    width: 90%;
+    height: 690px;
+    margin: 3rem auto;
+    // background-color: #eee;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 50px 10px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &-list {
+    width: 500px;
+    height: 200px;
+    border: 1px solid v.$secondary-color;
+    border-radius: 25px 0;
+    box-shadow: 5px 5px 10px;
+    margin: v.$gutter;
+    padding: v.$gutter;
+    background-color: v.$primary-color;
+    &-item {
+      color: v.$alt-color;
+      font-size: v.$gutter * 1.5;
+      &-date {
+        text-align: center;
+        margin-bottom: v.$gutter * 2;
+        color: v.$secondary-color;
+        border-top: 1px solid v.$secondary-color;
+        border-bottom: 1px solid v.$secondary-color;
+      }
+      &-info {
+        padding: v.$gutter / 3;
+        color: #eee;
+        font-weight: v.$text-normal;
+        margin-left: v.$gutter;
+      }
+    }
+  }
+}

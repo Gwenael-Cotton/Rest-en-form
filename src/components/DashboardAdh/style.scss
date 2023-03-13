@@ -1,0 +1,79 @@
+@use '../../styles/vars' as v;
+
+.dashboardMember {
+  padding: v.$gutter * 6 0 v.$gutter * 2 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__left {
+    width: 50%;
+
+  }
+
+  &__coaching {
+    
+
+    &-last {
+      margin: v.$gutter 0 0 0;
+      height: 380px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 8px .2px grey;
+    }
+  }
+
+  &__workout {
+    // background-color: aqua;
+
+    &-last {
+      margin: v.$gutter 0 0 0;
+      height: 465px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 8px .2px grey;
+    }
+  }
+
+  &__healthData {
+    width: 40%;
+  }
+  
+}
+
+.cta {
+  margin: v.$gutter * 2 v.$gutter;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    margin: 0 v.$gutter;
+    display: inline-block;
+  }
+
+  &__text {
+    display: block;
+    width: auto;
+    padding: v.$gutter / 1.5 v.$gutter * 1.5;
+    border: 2px solid v.$primary-color;
+    border-radius: 999px;
+    background-image: linear-gradient(to right, transparent 50%, v.$primary-color 50%, v.$secondary-color);
+    background-size: 200%;
+    color: v.$primary-color;
+    font-size: .8em;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      color: v.$alt-color;
+      background-position: 100%;
+      border: 2px solid v.$alt-color;
+    }
+  }
+  
+  &:nth-child(4) {
+      margin: 65px 0;
+      justify-content: center;
+  }
+}

@@ -1,0 +1,195 @@
+@use '../../styles/vars'as v;
+
+@media screen and (min-width: 769px) {
+.coachs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  // min-width: 1140px;
+  // margin: v.$gutter auto;
+  background-image: url(../../assets/personal_trainer.jpg);
+  background-position: 80% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+
+  &__title {
+    width: 100%;
+    // margin: 0 9rem;
+    margin-bottom: v.$gutter * 7;
+    padding: 2rem 4rem;
+    font-size: 4rem;
+    font-weight: v.$text-bold;
+    color: v.$primary-color;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+
+
+.coach {
+  // margin: v.$gutter v.$gutter * 1.5;
+  padding: v.$gutter v.$gutter * 1;
+  // width: 920px;
+  // @media (min-width: 1140px) {
+  //   width: calc((80% - 2rem)/3);
+  // }
+  box-shadow: 0 0 8px .2px #245768;
+  border-radius: v.$element-radius;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255);
+  margin-bottom: v.$gutter;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: v.$gutter * 1.5;
+
+    &-name {
+      padding: v.$gutter 0;
+      font-weight: v.$text-bold;
+      color: v.$primary-color;
+    }
+  
+    &-img {
+      width: 300px;
+      border-radius: 6px;
+    }
+  }
+
+
+  &__specialities {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &-item {
+      margin: v.$gutter / 2;
+      padding: v.$gutter / 2 v.$gutter / 1.5;
+      // background-color: v.$primary-color;
+      border-radius: v.$element-radius;
+      color: v.$primary-color;
+      font-weight: v.$text-bold;
+      font-size: 1em;
+    }
+  }
+
+  &__cta {
+    width: 50%;
+    margin: v.$gutter auto;
+    padding: v.$gutter v.$gutter * 2;
+    background-color: v.$primary-color;
+    border-radius: v.$element-radius;
+    color: v.$alt-color;
+    font-weight: v.$text-bold;
+    border: 1.5px solid v.$primary-color;
+  }
+
+  &__cta:hover {
+    background-color: v.$alt-color;
+    color: v.$primary-color;
+    border: 1.5px solid v.$primary-color;
+  }
+}
+}
+
+@media screen and (max-width: 768px) {
+  .coachs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #eee;
+  
+    &__title {
+      margin: 6rem auto;
+      margin-bottom: v.$gutter * 3;
+      font-size: 4rem;
+      font-weight: v.$text-bold;
+      color: v.$primary-color;
+    }
+  
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+  
+  
+  
+  .coach {
+    // margin: v.$gutter v.$gutter * 1.5;
+    padding: v.$gutter v.$gutter * 1;
+    // width: 920px;
+    // @media (min-width: 1140px) {
+    //   width: calc((80% - 2rem)/3);
+    // }
+    box-shadow: 0 0 8px .2px #245768;
+    border-radius: v.$element-radius;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255);
+    margin-bottom: v.$gutter;
+  
+    &__info {
+      display: flex;
+      flex-direction: column;
+      margin-right: v.$gutter * 1.5;
+  
+      &-name {
+        padding: v.$gutter 0;
+        font-weight: v.$text-bold;
+        color: v.$primary-color;
+      }
+    
+      &-img {
+        width: 300px;
+        border-radius: 6px;
+      }
+    }
+  
+  
+    &__specialities {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  
+      &-item {
+        margin: v.$gutter / 2;
+        padding: v.$gutter / 2 v.$gutter / 1.5;
+        // background-color: v.$primary-color;
+        border-radius: v.$element-radius;
+        color: v.$primary-color;
+        font-weight: v.$text-bold;
+        font-size: 1em;
+      }
+    }
+  
+    &__cta {
+      width: 50%;
+      margin: v.$gutter auto;
+      padding: v.$gutter v.$gutter * 2;
+      background-color: v.$primary-color;
+      border-radius: v.$element-radius;
+      color: v.$alt-color;
+      font-weight: v.$text-bold;
+      border: 1.5px solid v.$primary-color;
+    }
+  
+    &__cta:hover {
+      background-color: v.$alt-color;
+      color: v.$primary-color;
+      border: 1.5px solid v.$primary-color;
+    }
+  }
+}

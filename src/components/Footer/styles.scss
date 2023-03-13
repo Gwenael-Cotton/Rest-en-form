@@ -1,0 +1,24 @@
+@use '../../styles/vars'as v;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  padding: v.$gutter * 2 0;
+  color: v.$primary-color;
+
+  &__content {
+
+    &-team:hover {
+      color: v.$secondary-color;
+    }
+    &-coachs:hover {
+      color: v.$secondary-color;
+    }
+    &-legalNotice:hover {
+      color: v.$secondary-color;
+    }
+  }
+}
+

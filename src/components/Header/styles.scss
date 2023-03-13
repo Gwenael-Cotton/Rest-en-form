@@ -1,0 +1,167 @@
+@use '../../styles/vars' as v;
+
+.header {
+  width: 100%;
+  padding: v.$gutter; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: v.$alt-color;
+  box-shadow: v.$main-shadow;
+  position: fixed;
+  z-index: 9999;
+
+  &__logo {
+    width: 150px;
+    z-index: 5;
+  }
+
+  &__nav {
+    width: 20%;
+    margin: 0 v.$gutter * 2;
+
+    &-wrapper {
+
+    }
+  }
+
+  &__logout {
+
+    &-button {
+      display: block;
+      width: auto;
+      padding: v.$gutter / 1.5 v.$gutter * 1.5;
+      border: 2px solid v.$primary-color;
+      border-radius: 999px;
+      background-image: linear-gradient(to right, transparent 50%, v.$primary-color 50%, v.$secondary-color);
+      background-size: 200%;
+      color: v.$primary-color;
+      font-size: .8em;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        color: v.$alt-color;
+        background-position: 100%;
+        border: 2px solid v.$alt-color;
+      }
+    }
+
+    &:nth-child(4) {
+      margin: 65px 0;
+      justify-content: center;
+    }
+  }
+}
+
+.checkbox:checked ~ .menu {
+  display: block;
+  width: 200px;
+  margin: v.$gutter 0;
+  // padding-bottom: v.$gutter;
+}
+
+.checkbox {
+  position: absolute;
+  top: -5000px;
+  opacity: 0;
+}
+
+.toggle {
+  padding: 0 v.$gutter;
+}
+
+.menu {
+  display: none;
+
+  &-item {
+    margin: v.$gutter / 1.5 0 ;
+  }
+
+  .link {
+    color: v.$primary-color;
+    font-size: .9em;
+
+    &--active {
+      padding: 0 v.$gutter;
+      border-radius: 999px;
+      color: v.$alt-color;
+      background-color: v.$primary-color;
+    }
+  }
+}
+
+@media screen and (min-width : 768px) {
+  
+  .toggle,
+  .checkbox {
+    display: none;
+  }
+
+  .header__nav {
+    width: 40%;
+  }
+  .header__logo {
+    width: 200px;
+    z-index: 5;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &-item {
+      margin: 0 v.$gutter * 1.5;
+      margin: v.$gutter / 1.5 0 ;
+    }
+    
+    .link {
+      color: v.$primary-color;
+      font-size: .9em;
+      
+      &--active {
+        padding: 0 v.$gutter;
+        border-radius: 999px;
+        color: v.$alt-color;
+        background-color: v.$primary-color;
+      }
+    }
+  }
+}
+
+
+// @media screen and (min-width : 768px) {
+  
+//   .toggle,
+//   .checkbox {
+//     display: none;
+//   }
+
+//   .header__nav {
+//     width: 40%;
+//   }
+  
+//   .menu {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+    
+//     &-item {
+//       margin: 0 v.$gutter * 1.5;
+//       margin: v.$gutter / 1.5 0 ;
+//     }
+    
+//     .link {
+//       color: v.$primary-color;
+//       font-size: .9em;
+      
+//       &--active {
+//         padding: 0 v.$gutter;
+//         border-radius: 999px;
+//         color: v.$alt-color;
+//         background-color: v.$primary-color;
+//       }
+//     }
+//   }
+// }

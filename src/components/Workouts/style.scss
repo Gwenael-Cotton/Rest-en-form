@@ -1,0 +1,164 @@
+@use '../../styles/vars' as v;
+
+.selectWorkout {
+  text-align: left;
+  margin: 1rem;
+
+  &__label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  &__select {
+    color: darkslategray;
+  }
+}
+
+.workouts {
+  padding: v.$gutter * 6 0 v.$gutter * 2 0;
+  background-image: url(../../assets/training_notes_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 20% 80%;
+
+  &__title {
+    margin: v.$gutter * 2 0 v.$gutter * 2 0;
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: v.$text-bold;
+  }
+
+  &__content {
+    width: 70%;
+    margin: v.$gutter * 2 auto;
+  }
+}
+
+.workout {
+  margin: v.$gutter * 1.5 0;
+  padding: v.$gutter / 1.5 0;
+  background-color: v.$primary-color;
+  box-shadow: 0 0 10px 1px grey;
+  border-radius: v.$element-radius;
+
+  &__date {
+    margin-bottom: v.$gutter * 1.5;
+    padding: v.$gutter v.$gutter * 2;
+    font-weight: v.$text-normal;
+    font-size: 1.2em;
+    color: v.$alt-color;
+
+  }
+
+  &__text {
+    width: 60%;
+    height: 100px;
+    margin: 0 auto v.$gutter * 1.5 auto;
+    padding: v.$gutter * 1.5 v.$gutter * 2;
+    background-color: v.$alt-color;
+    border-radius: v.$element-radius;
+    text-align: left;
+    font-weight: v.$text-normal;
+    font-size: 1em;
+    color: v.$primary-color;
+  }
+
+  &__health {
+    margin: 0 v.$gutter * 4;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: .85em;
+
+    .amount {
+      padding: .2rem .5rem;
+      color: v.$alt-color;
+
+    }
+    .span {
+      color: black;
+      font-weight: v.$text-normal;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: #91E6D8;
+    box-shadow: 0 0 8px .2px gray;
+    color: #245768;
+    border-radius: 10px;
+    padding: .4rem 2rem;
+    float: right;
+  }
+}
+
+.ctaWorkout {
+  margin: v.$gutter * 3 0 0 0;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    margin: 0 v.$gutter;
+    display: inline-block;
+    background-color: v.$alt-color;
+    border-radius: 999px;
+  }
+
+  &__text {
+    display: block;
+    width: auto;
+    padding: v.$gutter / 1.3 v.$gutter * 2;
+    border: 2px solid v.$primary-color;
+    border-radius: 999px;
+    background-image: linear-gradient(to right, transparent 50%, v.$primary-color 50%, v.$secondary-color);
+    background-size: 200%;
+    color: v.$primary-color;
+    font-size: 1.2em;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      color: v.$alt-color;
+      background-position: 100%;
+      border: 2px solid v.$primary-color;
+    }
+  }
+}
+
+
+.coach-comment {
+  margin: .5rem 1rem;
+
+  &__meta {
+    display: flex;
+    align-items: center;
+
+    &--img {
+      width: 60px;
+      margin: 0.8rem 1rem;
+    }
+
+    &--info {
+      font-size: .8em;
+
+      .author {
+        font-weight: bold;
+      }
+
+      .date {
+        font-style: italic;
+      }
+      .time {
+        font-style: italic;
+      }
+    }
+  }
+
+  &--text {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 1rem;
+    margin: 0 2.5rem;
+
+  }
+}
